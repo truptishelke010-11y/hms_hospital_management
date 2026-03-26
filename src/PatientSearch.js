@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate, useSearchParams } from 'react-router-dom';
 import { 
-  Search, Users, Calendar, Phone, Mail, MapPin, 
-  Clock, Activity, Pill, AlertCircle, ChevronRight,
-  FileText, Heart, Thermometer, Eye
+  Search, Users, Calendar, Phone, Activity, Pill, AlertCircle, ChevronRight,
+  FileText, Heart, Thermometer
 } from 'lucide-react';
 import './PatientSearch.css';
 

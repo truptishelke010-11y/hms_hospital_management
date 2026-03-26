@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { 
-  Bed, Users, Calendar, Plus, Minus, CheckCircle, XCircle,
-  Clock, Activity, Filter, Search, Building, MapPin
+  Bed, Users, Calendar, Plus, CheckCircle, XCircle,
+  Clock, Activity, Filter, Search, Building
 } from 'lucide-react';
 import './RoomManagement.css';
 
