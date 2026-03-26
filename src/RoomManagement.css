@@ -1,0 +1,546 @@
+/* Room Management Styles */
+.room-content {
+  padding: 24px 32px;
+}
+
+.room-header {
+  margin-bottom: 24px;
+}
+
+.room-header h2 {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--gray-800);
+}
+
+/* Stats */
+.room-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-bottom: 24px;
+}
+
+.stat-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  box-shadow: var(--shadow);
+}
+
+.stat-card .stat-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stat-card.primary .stat-icon {
+  background: var(--light-blue);
+  color: var(--primary-blue);
+}
+
+.stat-card.success .stat-icon {
+  background: #d1fae5;
+  color: var(--success);
+}
+
+.stat-card.danger .stat-icon {
+  background: #fee2e2;
+  color: var(--danger);
+}
+
+.stat-card.warning .stat-icon {
+  background: #fef3c7;
+  color: var(--warning);
+}
+
+.stat-card h3 {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--gray-800);
+}
+
+.stat-card p {
+  font-size: 13px;
+  color: var(--gray-500);
+}
+
+/* Occupancy Section */
+.occupancy-section {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  margin-bottom: 24px;
+  box-shadow: var(--shadow);
+}
+
+.occupancy-section h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--gray-800);
+  margin-bottom: 16px;
+}
+
+.occupancy-bar-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.occupancy-bar {
+  height: 24px;
+  background: var(--gray-200);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.occupancy-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--primary-blue), var(--purple));
+  border-radius: 12px;
+  transition: width 0.5s ease;
+}
+
+.occupancy-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  color: var(--gray-600);
+}
+
+/* Filter Section */
+.filter-section {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 16px 24px;
+  margin-bottom: 24px;
+  box-shadow: var(--shadow);
+}
+
+.filter-group {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.filter-group svg {
+  color: var(--gray-500);
+}
+
+.filter-group span {
+  font-size: 14px;
+  color: var(--gray-600);
+}
+
+.type-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.type-btn {
+  padding: 8px 16px;
+  background: var(--gray-100);
+  border: none;
+  border-radius: 20px;
+  font-size: 13px;
+  color: var(--gray-600);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.type-btn:hover {
+  background: var(--gray-200);
+}
+
+.type-btn.active {
+  background: var(--primary-blue);
+  color: var(--white);
+}
+
+.type-btn.type-general.active {
+  background: var(--primary-blue);
+}
+
+.type-btn.type-private.active {
+  background: var(--purple);
+}
+
+.type-btn.type-icu.active {
+  background: var(--danger);
+}
+
+.type-btn.type-emergency.active {
+  background: var(--warning);
+}
+
+/* Floors Container */
+.floors-container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.floor-section {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  box-shadow: var(--shadow);
+}
+
+.floor-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--gray-200);
+}
+
+.floor-header h3 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--gray-800);
+}
+
+.floor-header h3 svg {
+  color: var(--primary-blue);
+}
+
+.floor-count {
+  font-size: 13px;
+  color: var(--gray-500);
+  background: var(--gray-100);
+  padding: 4px 12px;
+  border-radius: 12px;
+}
+
+/* Rooms Grid */
+.rooms-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+.room-card {
+  background: var(--gray-50);
+  border-radius: var(--radius);
+  padding: 16px;
+  cursor: pointer;
+  transition: var(--transition);
+  border: 2px solid transparent;
+}
+
+.room-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.room-card.occupied {
+  border-color: var(--danger);
+}
+
+.room-card.available {
+  border-color: var(--success);
+}
+
+.room-header-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.room-id {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--gray-800);
+}
+
+.status-icon.available {
+  color: var(--success);
+}
+
+.status-icon.occupied {
+  color: var(--danger);
+}
+
+.type-badge {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.type-badge.type-general {
+  background: var(--light-blue);
+  color: var(--primary-blue);
+}
+
+.type-badge.type-private {
+  background: #ede9fe;
+  color: var(--purple);
+}
+
+.type-badge.type-icu {
+  background: #fee2e2;
+  color: var(--danger);
+}
+
+.type-badge.type-emergency {
+  background: #fef3c7;
+  color: var(--warning);
+}
+
+.room-occupied, .room-available {
+  margin-top: 12px;
+}
+
+.patient-name {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--gray-800);
+  margin-bottom: 4px;
+}
+
+.bed-info {
+  display: block;
+  font-size: 12px;
+  color: var(--gray-500);
+  margin-bottom: 4px;
+}
+
+.admit-date {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 11px;
+  color: var(--gray-400);
+}
+
+.room-available {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.room-available span {
+  font-size: 13px;
+  color: var(--success);
+  font-weight: 500;
+}
+
+.assign-btn {
+  width: 100%;
+  padding: 8px;
+  background: var(--primary-blue);
+  color: var(--white);
+  border: none;
+  border-radius: var(--radius);
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.assign-btn:hover {
+  background: var(--primary-dark);
+}
+
+/* Room Details Modal */
+.room-details-modal {
+  background: var(--white);
+  border-radius: var(--radius-xl);
+  width: 100%;
+  max-width: 450px;
+  padding: 32px;
+  position: relative;
+  animation: slideUp 0.3s ease;
+}
+
+.room-details-modal .modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.room-details-modal .modal-header h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--gray-800);
+}
+
+.room-details-modal .status-badge {
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.room-details-modal .status-badge.available {
+  background: #d1fae5;
+  color: var(--success);
+}
+
+.room-details-modal .status-badge.occupied {
+  background: #fee2e2;
+  color: var(--danger);
+}
+
+.room-info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.room-info-grid .info-item {
+  display: flex;
+  flex-direction: column;
+  padding: 12px;
+  background: var(--gray-50);
+  border-radius: var(--radius);
+}
+
+.room-info-grid .label {
+  font-size: 12px;
+  color: var(--gray-500);
+  margin-bottom: 4px;
+}
+
+.room-info-grid .value {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--gray-800);
+}
+
+.patient-section, .available-section {
+  padding-top: 16px;
+  border-top: 1px solid var(--gray-200);
+}
+
+.patient-section h4 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--gray-700);
+  margin-bottom: 12px;
+}
+
+.patient-section h4 svg {
+  color: var(--primary-blue);
+}
+
+.patient-section .patient-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 20px;
+}
+
+.patient-section .patient-name {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--gray-800);
+}
+
+.patient-section .admit-date {
+  font-size: 13px;
+  color: var(--gray-500);
+}
+
+.available-section p {
+  font-size: 14px;
+  color: var(--gray-600);
+  margin-bottom: 20px;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.modal-actions .action-btn {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  border-radius: var(--radius);
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.modal-actions .action-btn.primary {
+  background: var(--primary-blue);
+  color: var(--white);
+}
+
+.modal-actions .action-btn.primary:hover {
+  background: var(--primary-dark);
+}
+
+.modal-actions .action-btn.secondary {
+  background: var(--gray-100);
+  color: var(--gray-700);
+}
+
+.modal-actions .action-btn.secondary:hover {
+  background: var(--gray-200);
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .room-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .room-content {
+    padding: 16px;
+  }
+  
+  .room-stats {
+    grid-template-columns: 1fr;
+  }
+  
+  .filter-group {
+    flex-wrap: wrap;
+  }
+  
+  .type-buttons {
+    flex-wrap: wrap;
+  }
+  
+  .rooms-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .room-info-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .modal-actions {
+    flex-direction: column;
+  }
+}
